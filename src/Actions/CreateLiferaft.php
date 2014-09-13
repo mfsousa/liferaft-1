@@ -183,9 +183,9 @@ class CreateLiferaft implements Action {
 
 			$this->failed();
 
-			$this->task('Retrying Clone...', function() use ($owner, $name)
+			$this->task('Retrying Clone...', function() use ($owner, $name, $branch)
 			{
-				$this->cloneRepository($owner, $name);
+				$this->cloneRepository($owner, $name, $branch);
 			});
 		}
 	}
