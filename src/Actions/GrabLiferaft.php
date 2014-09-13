@@ -77,7 +77,7 @@ class GrabLiferaft implements Action {
 	{
 		$this->task('Verifying This Repository Is Clean...', function()
 		{
-			if ($this->git->hasUncommitedChanges())
+			if ($this->git->hasUncommittedChanges())
 			{
 				$this->failAndKill('Please commit your changes in this repository first.');
 			}
